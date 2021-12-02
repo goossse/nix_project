@@ -7,5 +7,12 @@ namespace nix_project.Models
 {
     public class Service
     {
+        public int ServiceId { get; set; }
+        public string Title { get; set; }
+        public string Info { get; set; }
+        public int UserId { get; set; }
+        public List<ServiceType> Types { get; set; }
+        public List<Request> Requests { get; set; }
+        public List<Price> PriceList { get; set; }
     }
 }

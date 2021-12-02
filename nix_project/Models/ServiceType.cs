@@ -7,5 +7,8 @@ namespace nix_project.Models
 {
     public class ServiceType
     {
+        public int ServiceTypeId { get; set; }
+        public string Name { get; set; }
+        public List<Service> Services { get; set; }
     }
 }
