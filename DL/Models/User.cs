@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace nix_project.Models
+namespace DL.Models
 {
     public class User
     {
@@ -12,5 +12,6 @@ namespace nix_project.Models
         public string ContactDetails { get; set; }
         public List<Request> Requests{get;set;}
         public List<Service> Services { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

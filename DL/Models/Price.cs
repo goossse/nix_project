@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace nix_project.Models
+namespace DL.Models
 {
     public class Price
     {
