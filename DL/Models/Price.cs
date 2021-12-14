@@ -12,14 +12,11 @@ namespace DL.Models
         [Required]
         public int PriceId { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Valute]
         public string Currency { get; set; }
 
         [Required]
-        [MinLength(0)]
-        [MaxLength(10000)]
-        public decimal Value { get; set; }
+        public int Value { get; set; }
 
         [Required]
         public int ServiceId { get; set; }

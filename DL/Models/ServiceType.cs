@@ -12,7 +12,7 @@ namespace DL.Models
         [Required]
         public int ServiceTypeId { get; set; }
 
-        [StringLength(15)]
+        [StringLength(30, MinimumLength =2)]
         public string Name { get; set; }
         public List<Service> Services { get; set; }
     }

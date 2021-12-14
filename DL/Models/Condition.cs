@@ -13,7 +13,7 @@ namespace DL.Models
         public int ConditionId { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(2000,MinimumLength =2)]
         public string Info { get; set; }
 
         [Required]

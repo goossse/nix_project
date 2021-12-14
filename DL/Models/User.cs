@@ -12,11 +12,19 @@ namespace DL.Models
         public int UserId { get; set; }
 
         [Required]
-        [StringLength(15)]
+        [StringLength(30, MinimumLength =2)]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(30, MinimumLength =2)]
+        public string Surname { get; set; }
+
+        [Required]
+        [Range(typeof(DateTime), "01-01-1950", "01-01-2004")]
+        public DateTime DateOfBirth { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string ContactDetails { get; set; }
 
         [Required]

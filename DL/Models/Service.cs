@@ -13,11 +13,11 @@ namespace DL.Models
         public int ServiceId { get; set; }
 
         [Required]
-        [StringLength(15)]
+        [StringLength(30, MinimumLength =2)]
         public string Title { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(2000, MinimumLength =2)]
         public string Info { get; set; }
 
         [Required]

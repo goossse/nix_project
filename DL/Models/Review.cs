@@ -18,7 +18,7 @@ namespace DL.Models
         [MinLength(1)]
         public int Rate { get; set; }
 
-        [StringLength(200)]
+        [StringLength(2000, MinimumLength =2)]
         public string Text { get; set; }
 
         [Required]

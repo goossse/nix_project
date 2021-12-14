@@ -12,7 +12,7 @@ namespace DL.Models
         [Required]
         public int RequestId { get; set; }
 
-        [StringLength(200)]
+        [StringLength(2000,MinimumLength =2)]
         public string Description { get; set; }
         
         [Required]
