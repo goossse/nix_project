@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-
+using DL.Models.Base;
 
 namespace DL.Models
 {
-    public class Request
+    public class Request : BaseClass
     {
-        [Required]
-        public int RequestId { get; set; }
 
         [StringLength(2000,MinimumLength =2)]
         public string Description { get; set; }
-        
+
+        [Required]
+        public DateTime DateTimeOfCreating { get; set; }
+        [Required]
+        public DateTime StartOfBooking { get; set; }
+        [Required]
+        public DateTime EndOfBooking { get; set; }
+
         [Required]
         public int UserId { get; set; }
 

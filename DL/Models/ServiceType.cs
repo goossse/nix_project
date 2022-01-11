@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
+using DL.Models.Base;
 
 namespace DL.Models
 {
-    public class ServiceType
+    public class ServiceType : BaseClass
     {
         [Required]
         public int ServiceTypeId { get; set; }

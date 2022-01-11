@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using DL.Models.Base;
 
 namespace DL.Models
 {
-    public class User
+    public class User : BaseClass
     {
         [Required]
         public int UserId { get; set; }

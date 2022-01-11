@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-
+﻿using System.ComponentModel.DataAnnotations;
+using DL.Models.Base;
 
 namespace DL.Models
 {
-    public class Price
+    public class Price : BaseClass
     {
-        [Required]
-        public int PriceId { get; set; }
-
         [Valute]
         public string Currency { get; set; }
 

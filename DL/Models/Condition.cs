@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-
+﻿using System.ComponentModel.DataAnnotations;
+using DL.Models.Base;
 
 namespace DL.Models
 {
-    public class Condition
+    public class Condition : BaseClass
     {
         [Required]
-        public int ConditionId { get; set; }
-
-        [Required]
-        [StringLength(2000,MinimumLength =2)]
+        [StringLength(2000,MinimumLength = 2)]
         public string Info { get; set; }
 
         [Required]
