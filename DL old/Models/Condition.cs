@@ -6,11 +6,10 @@ namespace DL.Models
     public class Condition : BaseClass
     {
         [Required]
-        [StringLength(2000, MinimumLength = 2)]
+        [StringLength(2000,MinimumLength = 2)]
         public string Info { get; set; }
 
         [Required]
-        public int? RequestId { get; set; }
-        public Request Request { get; set; }
+        public int RequestId { get; set; }
     }
 }

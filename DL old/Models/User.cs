@@ -7,13 +7,15 @@ namespace DL.Models
 {
     public class User : BaseClass
     {
-        public int Id { get; set; }
         [Required]
-        [StringLength(30, MinimumLength = 2)]
+        public int UserId { get; set; }
+
+        [Required]
+        [StringLength(30, MinimumLength =2)]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(30, MinimumLength = 2)]
+        [StringLength(30, MinimumLength =2)]
         public string Surname { get; set; }
 
         [Required]
@@ -28,7 +30,7 @@ namespace DL.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        public List<Request> Requests { get; set; }
+        public List<Request> Requests{get;set;}
         public List<Service> Services { get; set; }
         public List<Review> Reviews { get; set; }
     }

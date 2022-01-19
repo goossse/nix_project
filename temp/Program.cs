@@ -1,20 +1,31 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.ComponentModel.DataAnnotations;
 using DL.Models;
-
-Console.WriteLine("Hello, World!");
-
-//User user1 = new User { UserId = 1, Email = "temp4@gmail.com", Name = "Ivan", Surname = "Ivanov", DateOfBirth = new DateTime(2001,4,2),  ContactDetails = "+388888888" };
-Price price1 = new Price { Currency = "USD", PriceId = 1, ServiceId = 1, Value = 1000 }; 
-
-var results = new List<ValidationResult>();
-var context = new ValidationContext(price1);
+using DL.Entity_Framework;
+using Microsoft.EntityFrameworkCore;
 
 
-if (!Validator.TryValidateObject(price1, context, results, true))
+
+using (ApplicationContext db = new ApplicationContext())
 {
-    foreach (var error in results)
+
+    // создаем два объекта User
+    User user1 = new User { Email = "temp4@gmail.com", Name = "Ivan", Surname = "Ivanov", DateOfBirth = new DateTime(2001, 4, 2), ContactDetails = "+388888888" };
+    User user2 = new User { Email = "temp44@gmail.com", Name = "Petr", Surname = "Ivanov", DateOfBirth = new DateTime(2001, 4, 4), ContactDetails = "+300000000" };
+
+
+    // добавляем их в бд
+    db.Users.AddRange(user1, user2);
+    db.SaveChanges();
+}
+// получение данных
+using (ApplicationContext db = new ApplicationContext())
+{
+    // получаем объекты из бд и выводим на консоль
+    var users = db.Users.ToList();
+    Console.WriteLine("Users list:");
+    foreach (User u in users)
     {
-        Console.WriteLine(error.ErrorMessage);
+        Console.WriteLine($"{u.Id}.{u.Name} {u.Email} {u.Surname} {u.DateOfBirth} {u.ContactDetails} ");
     }
 }

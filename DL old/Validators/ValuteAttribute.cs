@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace DL.Models
@@ -7,7 +7,7 @@ namespace DL.Models
     {
         public override bool IsValid(object value)
         {
-            if (value != null)
+            if (value != null) 
             {
                 string Currency = value.ToString();
                 if (Currency.Length == 3 && Currency.ToUpper() == Currency)

@@ -6,7 +6,10 @@ namespace DL.Models
 {
     public class ServiceType : BaseClass
     {
-        [StringLength(30, MinimumLength = 2)]
+        [Required]
+        public int ServiceTypeId { get; set; }
+
+        [StringLength(30, MinimumLength =2)]
         public string Name { get; set; }
         public List<Service> Services { get; set; }
     }

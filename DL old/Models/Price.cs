@@ -12,7 +12,6 @@ namespace DL.Models
         public int Value { get; set; }
 
         [Required]
-        public int? ServiceId { get; set; }
-        public Service Service { get; set; }
+        public int ServiceId { get; set; }
     }
 }
