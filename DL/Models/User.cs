@@ -7,7 +7,6 @@ namespace DL.Models
 {
     public class User : BaseClass
     {
-        public int Id { get; set; }
         [Required]
         [StringLength(30, MinimumLength = 2)]
         public string Name { get; set; }
